@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <title>Rick and Morty</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__btn">Enable pagination</a>
+    </header>
+    <main>
+        <a class="to_top">↑</a>
+        <div class="loader"></div>
+        <div class="main"></div>
+        <div class="modal-overlay modal_closed" id="modal-overlay"></div>
+        <div class="modal modal_closed" id="modal">
+            <a href="#" class="modal__close" id="modal-close" title="Закрыть модальное окно">x</a>
+            <div class="pers__content">
+                <div class="pers__img">
+                    <img src="" alt="" class="pers__img_elem">
+                </div>
+                <div class="pers__info">
+                    <div class="pers__info_container">
+                        <h3 class="pers__title">Name:</h3>
+                        <p class="pers__name_modal"></p>
+                    </div>
+                    <div class="pers__info_container">
+                        <h3 class="pers__title">Status:</h3>
+                        <p class="pers__status"></p>
+                    </div>
+                    <div class="pers__info_container">
+                        <h3 class="pers__title">Species:</h3>
+                        <p class="pers__species"></p>
+                    </div>
+                    <div class="pers__info_container">
+                        <h3 class="pers__title">Origin:</h3>
+                        <p class="pers__origin"></p>
+                    </div>
+                    <div class="pers__info_container">
+                        <h3 class="pers__title">Location:</h3>
+                        <p class="pers__location"></p>
+                    </div>
+                    <div class="pers__info_container">
+                        <h3 class="pers__title">Gender:</h3>
+                        <p class="pers__gender"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="pagination">
+            <a href="#" class="pagination__left"><</a>
+            <div class="pagination__content" id="pagination__content"></div>
+            <a href="#" class="pagination__right">></a>
+        </section>
+    </main> 
+    <script type="module" src="main.js"></script>
+</body>
+</html>
