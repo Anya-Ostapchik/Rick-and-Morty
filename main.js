@@ -84,6 +84,7 @@ function Model(){
 
     this.changePage = async (page) => {
         myView.clearPage();
+        // console.log(page);
         num = Number(page);
 
         this.createCards();
@@ -209,6 +210,7 @@ function View(){
     }
 
     this.createPagination = function(k){
+        // console.log(k);
         const pagination = document.querySelector('.pagination');
         pagination.style.display = 'flex';
 
@@ -301,6 +303,8 @@ function Controller(){
 
             arrowLeft.addEventListener('click', function (e){
                 e.preventDefault();
+                myModel.previousPage();
+
                 paginPages = null;
                 paginPages = document.querySelectorAll('.pagination__content_page');
 
@@ -310,11 +314,12 @@ function Controller(){
                         myModel.changePage(page.textContent);
                     });
                 }
-                myModel.previousPage();
             });
 
             arrowRight.addEventListener('click', function (e){
                 e.preventDefault();
+                myModel.nextPage();
+
                 paginPages = null;
                 paginPages = document.querySelectorAll('.pagination__content_page');
 
@@ -324,7 +329,6 @@ function Controller(){
                         myModel.changePage(page.textContent);
                     });
                 }
-                myModel.nextPage();
             });
 
             this.removeEventListener('click', createPagination);

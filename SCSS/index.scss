@@ -1,7 +1,7 @@
 body{
     background-color: rgb(151, 148, 148);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 0 15px;
+    padding: 0 30px;
     .loader{
         display: flex;
         justify-content: center;
@@ -41,11 +41,11 @@ body{
     color: #969393;
     position: fixed;
     font-size: 28px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50%;
+    right: 2px;
     z-index: 10;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     text-decoration: none;
     &:hover{
@@ -226,6 +226,9 @@ body{
         font-size: 24px;
         text-align: center;
         overflow: hidden;
+        @media (max-width: 400px){
+            font-size: 20px;
+        }
         &_page{
             display: inline-block;
             background-color: #ffffffc4;
@@ -233,7 +236,11 @@ body{
             border-radius: 5px;
             padding: 2px 5px;
             margin-right: 10px;
+            width: 36px;
             cursor: pointer;
+            @media (max-width: 400px){
+                width: 32px;
+            }
             &:last-child{
                 margin-right: 0px;
             }
